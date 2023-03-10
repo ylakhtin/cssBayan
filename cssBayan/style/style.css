@@ -1,0 +1,86 @@
+body {
+    max-width: 1000px;
+    background-color: blanchedalmond;
+    margin: 0 auto;
+}
+.ac-section{
+    cursor: pointer;
+}
+.ac-section:hover .cross {
+    background-image: url('../asset/svg/cross_plus.svg');
+    background-repeat: no-repeat;
+    transition: 1s;
+}
+
+.ac-section:hover .item-header {
+    color: black;
+    transition: 1s;
+}
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+    text-align: center;
+}
+.accordeon-header{
+    color: black;
+    font-weight: 700;
+    font-size: 30px;
+    text-align: left;
+    padding: 5px;
+}
+.item-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: blue;
+}
+.cross {
+    width: 32px;
+    height: 32px;
+}
+.item {
+    font-weight: 700;
+    font-size: 20px;
+    text-align: left;
+    border-top: 2px solid gray;
+    padding: 5px;
+    height: auto;
+    overflow: hidden;
+    max-height: 27px;
+    background: none;
+    transition: max-height 1s;
+}
+.item:hover{
+    max-height: 500px;
+}
+.item:hover .cross{
+    background-image: url('../asset/svg/cross.svg');
+    background-repeat: no-repeat;
+    transition: 1s;
+}
+.item:active  {
+    opacity: 0.5;
+    cursor:grabbing;
+}
+.item:focus .item-header{
+    color: black;
+}
+.item:active .item-header {
+    color: blue;
+}
+.item:focus {
+    max-height: 500px;
+}
+.item:focus .cross{
+    background-image: url('../asset/svg/cross.svg');
+    background-repeat: no-repeat;
+    transition: 1s;
+}
+.picture {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 300px;
+    min-height: 300px;
+}
