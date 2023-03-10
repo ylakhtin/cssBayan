@@ -3,6 +3,9 @@ body {
     background-color: blanchedalmond;
     margin: 0 auto;
 }
+:focus {
+    outline: none;
+}
 .ac-section{
     cursor: pointer;
 }
@@ -11,7 +14,6 @@ body {
     background-repeat: no-repeat;
     transition: 1s;
 }
-
 .ac-section:hover .item-header {
     color: black;
     transition: 1s;
