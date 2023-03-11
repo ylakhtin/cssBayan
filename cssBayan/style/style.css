@@ -1,7 +1,7 @@
 body {
-    max-width: 1000px;
+    max-width: 70%;
     background-color: blanchedalmond;
-    margin: 0 auto;
+    margin: auto;
 }
 :focus {
     outline: none;
@@ -21,15 +21,14 @@ body {
 .flex-container {
     display: flex;
     flex-direction: column;
-    min-width: 300px;
     text-align: center;
 }
 .accordeon-header{
     color: black;
     font-weight: 700;
-    font-size: 30px;
+    font-size: 2em;
     text-align: left;
-    padding: 5px;
+    padding: 0.5em;
 }
 .item-header {
     display: flex;
@@ -38,23 +37,23 @@ body {
     color: blue;
 }
 .cross {
-    width: 32px;
-    height: 32px;
+    width: 1.6em;
+    height: 1.6em;
 }
 .item {
     font-weight: 700;
-    font-size: 20px;
+    font-size: 1.5em;
     text-align: left;
-    border-top: 2px solid gray;
-    padding: 5px;
+    border-top: 0.1em solid gray;
+    padding: 0.5em;
     height: auto;
     overflow: hidden;
-    max-height: 27px;
+    max-height: 1.6em;
     background: none;
     transition: max-height 1s;
 }
 .item:hover{
-    max-height: 500px;
+    max-height: 15em;
 }
 .item:hover .cross{
     background-image: url('../asset/svg/cross.svg');
@@ -72,7 +71,7 @@ body {
     color: blue;
 }
 .item:focus {
-    max-height: 500px;
+    max-height: 15em;
 }
 .item:focus .cross{
     background-image: url('../asset/svg/cross.svg');
@@ -83,6 +82,34 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    height: 300px;
-    min-height: 300px;
+    margin: 0.5em;
+    height: 13em;
+    min-height: 13em;
+}
+@media (max-width: 820px){
+    .accordeon-header{
+        font-size: 1.5em;
+    }
+    .item {
+        font-size: 1em;
+    }
+    .cross {
+        width: 1.7em;
+        height: 1.7em;
+    }
+}
+@media (max-width: 320px){
+    .accordeon-header{
+        font-size: 1em;
+    }
+    .item {
+        font-size: 0.6em;
+    }
+    .cross {
+        width: 1.5em;
+        height: 1.5em;
+    }
+    .picture {
+        margin: 0.8em;
+    }
 }
